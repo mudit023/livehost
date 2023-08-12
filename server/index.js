@@ -23,4 +23,14 @@ io.on("connection", (socket) => {
     // emitting the request back to join the room
     io.to(socket.id).emit("room:join", data);
   });
+
+  // handling calling the other party i.e sending the offer
+  socket.on("user:call", ({ to, offer }) => {
+    io.to(to).emit("incoming:call", { from: socket.id, offer });
+  });
+
+  // handling accepting call i.e accepting the offer and sending answer.
+  socket.on("call:accepted", ({ to, answer }) => {
+    io.to(to).emit("call:accepted", { from: socket.id, answer });
+  });
 });
