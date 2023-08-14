@@ -14,7 +14,10 @@ function App() {
           <span>livehost</span>
         </div>
         <div>
-          <a className="text-white cursor-pointer hover:text-white">
+          <a
+            href="https://github.com/mudit023/livehost"
+            className="text-white cursor-pointer hover:text-white"
+          >
             <AiFillGithub />
           </a>
         </div>
