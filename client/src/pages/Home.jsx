@@ -33,13 +33,17 @@ function Home() {
     setRoom("");
   };
   return (
-    <form onSubmit={submitHandler}>
+    <form
+      onSubmit={submitHandler}
+      className="flex flex-col gap-5 border-2 border-cyan-700 rounded-lg px-4 py-6 min-w-[400px] text-lg"
+    >
       <input
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
         required
+        className="w-full rounded py-2 px-1 outline-none"
       />
       <input
         type="text"
@@ -47,8 +51,11 @@ function Home() {
         onChange={(e) => setRoom(e.target.value)}
         placeholder="Room No."
         required
+        className="w-full rounded py-2 px-1 outline-none"
       />
-      <button type="submit">Enter Room</button>
+      <button type="submit" className="border-none bg-cyan-600 mt-4">
+        Enter Room
+      </button>
     </form>
   );
 }
