@@ -12,7 +12,8 @@ export function useSocket() {
 
 // Providing the socket context
 export function SocketProvider(props) {
-  const socket = useMemo(() => io("localhost:8000"), []);
+  //for development "localhost:8000";
+  const socket = useMemo(() => io("livehost-server.up.railway.app"), []);
 
   return (
     <SocketContext.Provider value={socket}>
