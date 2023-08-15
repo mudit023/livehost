@@ -125,7 +125,7 @@ function Room() {
 
   return (
     <div className="flex flex-col justify-center items-center gap-4">
-      <h1>{`Welcome to Room ${routeInfo.roomId}`}</h1>
+      <h1 className="text-xl sm:text-6xl font-medium">{`Welcome to Room ${routeInfo.roomId}`}</h1>
       <h3 className="">
         {remoteId === "" ? (
           <p>No one in the room</p>
